@@ -1,2 +1,1 @@
 language: cpp
-install: travis_wait 6000 ./configure
